@@ -2,6 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import 'menu_widget.dart';
+
 class GameScreen extends StatefulWidget {
   const GameScreen({super.key});
 
@@ -70,6 +72,7 @@ class _GameScreenState extends State<GameScreen> {
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 64, 67, 120),
       ),
+      drawer: MenuWidget(),
       body: SingleChildScrollView(
         child: Column(
           children: [
