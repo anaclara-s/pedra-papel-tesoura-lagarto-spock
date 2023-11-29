@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'game_screen.dart';
+import 'home_screen.dart';
 
 void main() {
   runApp(
     const MaterialApp(
-      home: GameScreen(),
+      home: HomeScreen(),
     ),
   );
 }
