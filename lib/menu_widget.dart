@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import 'game_screen.dart';
+import 'home_screen.dart';
 
 class MenuWidget extends StatelessWidget {
   const MenuWidget({super.key});
@@ -11,23 +12,30 @@ class MenuWidget extends StatelessWidget {
     return Drawer(
       child: ListView(
         children: [
-          DrawerHeader(child: Text('Pedra, papel, tesoura, lagarto e spock')),
+          const DrawerHeader(child: Text('Pedra, papel, tesoura, lagarto e spock')),
           ListTile(
             leading: Icon(MdiIcons.controller),
-            title: Text('Jogo'),
+            title: const Text('Jogo'),
             onTap: () {
-              MaterialPageRoute(builder: (context) => GameScreen());
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const GameScreen()));
             },
           ),
           ListTile(
-            leading: Icon(Icons.notes_rounded),
-            title: Text('Regras'),
-            onTap: () {},
+            leading: const Icon(Icons.notes_rounded),
+            title: const Text('Regras'),
+            onTap: () {
+              //   Navigator.push(context,
+              // MaterialPageRoute(builder: (context) => RuleScreen()));
+            },
           ),
           ListTile(
             leading: Icon(MdiIcons.backburger),
-            title: Text('Tela inicial'),
-            onTap: () {},
+            title: const Text('Tela inicial'),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const HomeScreen()));
+            },
           ),
         ],
       ),

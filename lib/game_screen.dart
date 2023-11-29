@@ -68,11 +68,11 @@ class _GameScreenState extends State<GameScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 238, 238, 243),
+      backgroundColor: const Color.fromARGB(255, 238, 238, 243),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 64, 67, 120),
+        backgroundColor: const Color.fromARGB(255, 64, 67, 120),
       ),
-      drawer: MenuWidget(),
+      drawer: const MenuWidget(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -149,7 +149,7 @@ class _GameScreenState extends State<GameScreen> {
                 ),
               ],
             ),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -159,17 +159,17 @@ class _GameScreenState extends State<GameScreen> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: menssage == 'Vitória'
-                        ? Color.fromARGB(255, 62, 124, 64)
+                        ? const Color.fromARGB(255, 62, 124, 64)
                         : menssage == 'Empate'
-                            ? Color.fromARGB(255, 248, 219, 90)
+                            ? const Color.fromARGB(255, 248, 219, 90)
                             : menssage == 'Derrota'
-                                ? Color.fromARGB(255, 190, 61, 52)
+                                ? const Color.fromARGB(255, 190, 61, 52)
                                 : Colors.black,
                   ),
                   child: Center(
                     child: Text(
-                      '$menssage',
-                      style: TextStyle(
+                      menssage,
+                      style: const TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
