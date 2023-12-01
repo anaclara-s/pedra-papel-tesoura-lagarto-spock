@@ -21,7 +21,10 @@ class RuleItem extends StatelessWidget {
           children: [
             Text(
               text,
-              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
           ],
@@ -29,10 +32,24 @@ class RuleItem extends StatelessWidget {
         Row(
           children: [
             Expanded(
-              child: Text(
-                'Ganha de: \n $winsText',
-                style: const TextStyle(color: Colors.green),
-                textAlign: TextAlign.left,
+              child: RichText(
+                text: TextSpan(
+                  style: DefaultTextStyle.of(context).style,
+                  children: [
+                    TextSpan(
+                      text: 'Ganha de: \n',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18),
+                    ),
+                    TextSpan(
+                      text: winsText,
+                      style: const TextStyle(color: Colors.green, fontSize: 18),
+                    ),
+                  ],
+                ),
+                textAlign: TextAlign.center,
               ),
             ),
             Padding(
@@ -40,10 +57,24 @@ class RuleItem extends StatelessWidget {
               child: Image(image: image, height: 100),
             ),
             Expanded(
-              child: Text(
-                'Perde de: \n $defeatText',
-                style: const TextStyle(color: Colors.red),
-                textAlign: TextAlign.right,
+              child: RichText(
+                text: TextSpan(
+                  style: DefaultTextStyle.of(context).style,
+                  children: [
+                    TextSpan(
+                      text: 'Perde de: \n',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18),
+                    ),
+                    TextSpan(
+                      text: defeatText,
+                      style: const TextStyle(color: Colors.red, fontSize: 18),
+                    ),
+                  ],
+                ),
+                textAlign: TextAlign.center,
               ),
             )
           ],
