@@ -19,7 +19,7 @@ class _RuleScreenState extends State<RuleScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 64, 67, 120),
-        title: Text('Regras'),
+        title: const Text('Regras'),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -72,7 +72,7 @@ class RuleItem extends StatelessWidget {
   final String defeatText;
 
   const RuleItem(
-      {required this.image,
+      {super.key, required this.image,
       required this.text,
       required this.winsText,
       required this.defeatText});
@@ -85,9 +85,9 @@ class RuleItem extends StatelessWidget {
           children: [
             Text(
               text,
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
           ],
         ),
         Row(
@@ -95,7 +95,7 @@ class RuleItem extends StatelessWidget {
             Expanded(
               child: Text(
                 'Ganha de: \n $winsText',
-                style: TextStyle(color: Colors.green),
+                style: const TextStyle(color: Colors.green),
                 textAlign: TextAlign.left,
               ),
             ),
@@ -106,18 +106,18 @@ class RuleItem extends StatelessWidget {
             Expanded(
               child: Text(
                 'Perde de: \n $defeatText',
-                style: TextStyle(color: Colors.red),
+                style: const TextStyle(color: Colors.red),
                 textAlign: TextAlign.right,
               ),
             )
           ],
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         Container(
           height: 1,
-          color: Color.fromARGB(255, 64, 67, 120),
+          color: const Color.fromARGB(255, 64, 67, 120),
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
       ],
     );
   }

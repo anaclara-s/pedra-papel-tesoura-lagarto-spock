@@ -28,7 +28,7 @@ class MenuWidget extends StatelessWidget {
             title: const Text('Regras'),
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => RuleScreen()));
+                  MaterialPageRoute(builder: (context) => const RuleScreen()));
             },
           ),
           // ListTile(

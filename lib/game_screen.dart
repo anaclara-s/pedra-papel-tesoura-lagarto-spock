@@ -30,8 +30,6 @@ class _GameScreenState extends State<GameScreen> {
     userChoiceImage = AssetImage('assets/$choice.png');
     computerChoiceImage = AssetImage('assets/$randoms.png');
 
-    print('Click:$choice, Random:$randoms');
-
     if ((choice == 'pedra' && randoms == 'papel') ||
         (choice == 'pedra' && randoms == 'spock') ||
         (choice == 'papel' && randoms == 'tesoura') ||

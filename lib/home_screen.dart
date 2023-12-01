@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('assets/logoB.png'),
                 fit: BoxFit.contain,
@@ -104,7 +104,7 @@ class HomeScreen extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => RuleScreen(),
+                              builder: (context) => const RuleScreen(),
                             ),
                           );
                         },
