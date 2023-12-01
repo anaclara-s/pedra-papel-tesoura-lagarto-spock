@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'game_screen.dart';
+import 'rule_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -100,8 +101,12 @@ class HomeScreen extends StatelessWidget {
                               const Color.fromARGB(255, 240, 136, 47),
                         ),
                         onPressed: () {
-                          // Navigator.push(context,
-                          //     MaterialPageRoute(builder: (context) => RuleScreen(),),);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => RuleScreen(),
+                            ),
+                          );
                         },
                         child: const Text(
                           'Regras',

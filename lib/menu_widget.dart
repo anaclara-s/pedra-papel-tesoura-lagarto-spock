@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import 'game_screen.dart';
+import 'rule_screen.dart';
 // import 'home_screen.dart';
 
 class MenuWidget extends StatelessWidget {
@@ -26,8 +27,8 @@ class MenuWidget extends StatelessWidget {
             leading: const Icon(Icons.notes_rounded),
             title: const Text('Regras'),
             onTap: () {
-              //   Navigator.push(context,
-              // MaterialPageRoute(builder: (context) => RuleScreen()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => RuleScreen()));
             },
           ),
           // ListTile(

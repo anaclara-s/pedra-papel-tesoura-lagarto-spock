@@ -164,7 +164,7 @@ class _GameScreenState extends State<GameScreen> {
                             ? const Color.fromARGB(255, 248, 219, 90)
                             : menssage == 'Derrota'
                                 ? const Color.fromARGB(255, 190, 61, 52)
-                                : Colors.black,
+                                : Colors.transparent,
                   ),
                   child: Center(
                     child: Text(
