@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-import 'menu_widget.dart';
+import '../widgets/menu_widget.dart';
 
 class GameScreen extends StatefulWidget {
   const GameScreen({super.key});
