@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pedra_papel_tesoura_lagarto_spock/widgets/custom_appbar.dart';
 
+import '../widgets/custom_appbar.dart';
 import '../widgets/rule_widget.dart';
 
 class RuleScreen extends StatefulWidget {
@@ -20,7 +20,7 @@ class _RuleScreenState extends State<RuleScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
+      appBar: const CustomAppBar(
         text: 'Regras',
       ),
       body: SingleChildScrollView(

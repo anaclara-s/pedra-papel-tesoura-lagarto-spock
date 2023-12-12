@@ -36,7 +36,7 @@ class RuleItem extends StatelessWidget {
                 text: TextSpan(
                   style: DefaultTextStyle.of(context).style,
                   children: [
-                    TextSpan(
+                    const TextSpan(
                       text: 'Ganha de: \n',
                       style: TextStyle(
                           color: Colors.black,
@@ -61,7 +61,7 @@ class RuleItem extends StatelessWidget {
                 text: TextSpan(
                   style: DefaultTextStyle.of(context).style,
                   children: [
-                    TextSpan(
+                    const TextSpan(
                       text: 'Perde de: \n',
                       style: TextStyle(
                           color: Colors.black,

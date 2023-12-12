@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:pedra_papel_tesoura_lagarto_spock/screens/home_screen.dart';
+import 'package:pedra_papel_tesoura_lagarto_spock/pages/home_page.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {

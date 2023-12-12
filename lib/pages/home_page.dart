@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../widgets/custom_elevatedbutton.dart';
 import '../widgets/custom_text.dart';
-import 'game_screen.dart';
-import 'rule_screen.dart';
+import 'game_page.dart';
+import 'rule_page.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -65,7 +65,8 @@ class HomeScreen extends StatelessWidget {
                             ),
                           );
                         },
-                        backgroundColor: Color.fromARGB(255, 104, 139, 46),
+                        backgroundColor:
+                            const Color.fromARGB(255, 104, 139, 46),
                         text: 'Iniciar jogo',
                       ),
                     ],
@@ -91,7 +92,8 @@ class HomeScreen extends StatelessWidget {
                             ),
                           );
                         },
-                        backgroundColor: Color.fromARGB(255, 240, 136, 47),
+                        backgroundColor:
+                            const Color.fromARGB(255, 240, 136, 47),
                         text: 'Regras',
                       ),
                     ],

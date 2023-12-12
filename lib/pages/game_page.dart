@@ -1,10 +1,10 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:pedra_papel_tesoura_lagarto_spock/screens/final_screen.dart';
-import 'package:pedra_papel_tesoura_lagarto_spock/widgets/custom_appbar.dart';
 
-import '../widgets/menu_widget.dart';
+import 'final_page.dart';
+import '../widgets/custom_appbar.dart';
+import '../widgets/custom_drawer.dart';
 
 class GameScreen extends StatefulWidget {
   const GameScreen({super.key});
@@ -99,7 +99,7 @@ class _GameScreenState extends State<GameScreen> {
       appBar: CustomAppBar(
         text: 'Pontuação: $score',
       ),
-      drawer: const MenuWidget(),
+      drawer: const CustomDrawer(),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(

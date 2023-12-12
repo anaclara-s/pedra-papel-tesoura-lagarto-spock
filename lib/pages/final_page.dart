@@ -1,12 +1,12 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:pedra_papel_tesoura_lagarto_spock/widgets/custom_appbar.dart';
 
+import '../widgets/custom_appbar.dart';
 import '../widgets/custom_elevatedbutton.dart';
 import '../widgets/custom_text.dart';
-import 'game_screen.dart';
-import 'home_screen.dart';
+import 'game_page.dart';
+import 'home_page.dart';
 
 class FinalScreen extends StatefulWidget {
   final int victory;
@@ -28,7 +28,7 @@ class _FinalScreenState extends State<FinalScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
+      appBar: const CustomAppBar(
         automaticallyImplyLeading: false,
         text: 'Jogo encerrado',
       ),
@@ -40,7 +40,7 @@ class _FinalScreenState extends State<FinalScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Align(
+                const Align(
                   alignment: Alignment.center,
                   child: CustomText(
                     text: 'Pontuação final:',
@@ -58,19 +58,19 @@ class _FinalScreenState extends State<FinalScreen> {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CustomText(
+              const CustomText(
                 text: 'Detalhes da sua pontuação',
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               buildScoreDetail(
                 'Vitórias',
                 widget.victory,
-                Color.fromARGB(255, 62, 124, 64),
+                const Color.fromARGB(255, 62, 124, 64),
               ),
               buildScoreDetail(
                 'Empates',
                 widget.tie.abs(),
-                Color.fromARGB(255, 248, 219, 90),
+                const Color.fromARGB(255, 248, 219, 90),
               ),
               buildScoreDetail(
                 'Derrotas',
@@ -85,10 +85,10 @@ class _FinalScreenState extends State<FinalScreen> {
               padding: const EdgeInsets.all(10),
               child: Column(
                 children: [
-                  CustomText(
+                  const CustomText(
                     text: 'O que dejesa agora?',
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -97,11 +97,11 @@ class _FinalScreenState extends State<FinalScreen> {
                           Navigator.pop(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => HomeScreen(),
+                              builder: (context) => const HomeScreen(),
                             ),
                           );
                         },
-                        backgroundColor: Color.fromARGB(255, 1, 63, 115),
+                        backgroundColor: const Color.fromARGB(255, 1, 63, 115),
                         text: 'Ir para tela inicial',
                       ),
                       CustomElevatedButton(
@@ -109,11 +109,12 @@ class _FinalScreenState extends State<FinalScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => GameScreen(),
+                              builder: (context) => const GameScreen(),
                             ),
                           );
                         },
-                        backgroundColor: Color.fromARGB(255, 104, 139, 46),
+                        backgroundColor:
+                            const Color.fromARGB(255, 104, 139, 46),
                         text: 'Jogar novamente',
                       ),
                     ],
@@ -122,7 +123,7 @@ class _FinalScreenState extends State<FinalScreen> {
                     onPressed: () {
                       exit(0);
                     },
-                    backgroundColor: Color.fromARGB(255, 121, 121, 121),
+                    backgroundColor: const Color.fromARGB(255, 121, 121, 121),
                     text: 'Fechar o aplicativo',
                   ),
                 ],

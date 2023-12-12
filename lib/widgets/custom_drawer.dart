@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-import '../screens/game_screen.dart';
-import '../screens/rule_screen.dart';
+import '../pages/game_page.dart';
+import '../pages/rule_page.dart';
 
-class MenuWidget extends StatelessWidget {
-  const MenuWidget({super.key});
+class CustomDrawer extends StatelessWidget {
+  const CustomDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
