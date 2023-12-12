@@ -75,7 +75,7 @@ class HomeScreen extends StatelessWidget {
                         },
                         child: const Text(
                           'Iniciar jogo',
-                          style: TextStyle(fontSize: 16),
+                          style: TextStyle(fontSize: 16, color: Colors.white),
                         ),
                       ),
                     ],
@@ -110,7 +110,7 @@ class HomeScreen extends StatelessWidget {
                         },
                         child: const Text(
                           'Regras',
-                          style: TextStyle(fontSize: 16),
+                          style: TextStyle(fontSize: 16, color: Colors.white),
                         ),
                       ),
                     ],

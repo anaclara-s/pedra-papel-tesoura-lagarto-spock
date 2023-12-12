@@ -22,6 +22,8 @@ class _RuleScreenState extends State<RuleScreen> {
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 64, 67, 120),
         title: const Text('Regras'),
+        titleTextStyle: TextStyle(
+            color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
         centerTitle: true,
       ),
       body: SingleChildScrollView(

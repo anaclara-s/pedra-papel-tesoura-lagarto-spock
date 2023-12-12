@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:pedra_papel_tesoura_lagarto_spock/screens/final_screen.dart';
 
 import '../widgets/menu_widget.dart';
 
@@ -22,6 +23,11 @@ class _GameScreenState extends State<GameScreen> {
   var scissorsImage = const AssetImage('assets/tesoura.png');
   var lizardImage = const AssetImage('assets/lagarto.png');
   var spockImage = const AssetImage('assets/spock.png');
+
+  var score = 0;
+  var victory = 0;
+  var defeat = 0;
+  var tie = 0;
 
   void move(String choice) {
     int random = Random().nextInt(4);
@@ -60,6 +66,24 @@ class _GameScreenState extends State<GameScreen> {
       setState(() {
         menssage = 'Empate';
       });
+      score--;
+      tie -= 1;
+    }
+    if (menssage == 'Vitória') {
+      score += 3;
+      victory++;
+    } else if (menssage == 'Derrota') {
+      score -= 2;
+      defeat++;
+    }
+    if (score >= 20 || score <= 0) {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) =>
+              FinalScreen(victory: victory, tie: tie, defeat: defeat),
+        ),
+      );
     }
   }
 
@@ -69,9 +93,20 @@ class _GameScreenState extends State<GameScreen> {
       backgroundColor: const Color.fromARGB(255, 238, 238, 243),
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 64, 67, 120),
+        title: Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text('Pontuação: $score',
+                  style: TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.bold)),
+            ],
+          ),
+        ),
       ),
       drawer: const MenuWidget(),
       body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: Column(
           children: [
             Row(
