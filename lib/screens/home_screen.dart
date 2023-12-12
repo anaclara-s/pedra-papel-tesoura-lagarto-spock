@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/custom_elevatedbutton.dart';
+import '../widgets/custom_text.dart';
 import 'game_screen.dart';
 import 'rule_screen.dart';
 
@@ -10,12 +12,9 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 1, 63, 115),
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        shadowColor: const Color.fromARGB(0, 255, 255, 255),
-        elevation: 0,
-      ),
-      body: Center(
+      body: Padding(
+        padding:
+            const EdgeInsets.only(left: 20, right: 20, top: 100, bottom: 20),
         child: Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
@@ -52,19 +51,12 @@ class HomeScreen extends StatelessWidget {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text(
-                        'Já sabe como joga? \n Então:',
+                      const CustomText(
+                        text: 'Já sabe como joga? \n Então:',
                         textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                        ),
+                        color: Colors.white,
                       ),
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor:
-                              const Color.fromARGB(255, 104, 139, 46),
-                        ),
+                      CustomElevatedButton(
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -73,10 +65,8 @@ class HomeScreen extends StatelessWidget {
                             ),
                           );
                         },
-                        child: const Text(
-                          'Iniciar jogo',
-                          style: TextStyle(fontSize: 16, color: Colors.white),
-                        ),
+                        backgroundColor: Color.fromARGB(255, 104, 139, 46),
+                        text: 'Iniciar jogo',
                       ),
                     ],
                   ),
@@ -87,19 +77,12 @@ class HomeScreen extends StatelessWidget {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text(
-                        'Primeira vez? \n De uma olhada nas:',
+                      const CustomText(
+                        text: 'Primeira vez? \n De uma olhada nas:',
                         textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                        ),
+                        color: Colors.white,
                       ),
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor:
-                              const Color.fromARGB(255, 240, 136, 47),
-                        ),
+                      CustomElevatedButton(
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -108,10 +91,8 @@ class HomeScreen extends StatelessWidget {
                             ),
                           );
                         },
-                        child: const Text(
-                          'Regras',
-                          style: TextStyle(fontSize: 16, color: Colors.white),
-                        ),
+                        backgroundColor: Color.fromARGB(255, 240, 136, 47),
+                        text: 'Regras',
                       ),
                     ],
                   ),

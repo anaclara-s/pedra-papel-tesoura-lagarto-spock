@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:pedra_papel_tesoura_lagarto_spock/screens/final_screen.dart';
+import 'package:pedra_papel_tesoura_lagarto_spock/widgets/custom_appbar.dart';
 
 import '../widgets/menu_widget.dart';
 
@@ -67,21 +68,25 @@ class _GameScreenState extends State<GameScreen> {
         menssage = 'Empate';
       });
       score--;
-      tie -= 1;
+      tie--;
     }
     if (menssage == 'Vitória') {
-      score += 3;
+      score += 4;
       victory++;
     } else if (menssage == 'Derrota') {
       score -= 2;
       defeat++;
     }
-    if (score >= 20 || score <= 0) {
+    if (score >= 30 || score <= 1) {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) =>
-              FinalScreen(victory: victory, tie: tie, defeat: defeat),
+          builder: (context) => FinalScreen(
+            victory: victory,
+            tie: tie,
+            defeat: defeat,
+            score: score,
+          ),
         ),
       );
     }
@@ -91,18 +96,8 @@ class _GameScreenState extends State<GameScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 238, 238, 243),
-      appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 64, 67, 120),
-        title: Center(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text('Pontuação: $score',
-                  style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold)),
-            ],
-          ),
-        ),
+      appBar: CustomAppBar(
+        text: 'Pontuação: $score',
       ),
       drawer: const MenuWidget(),
       body: SingleChildScrollView(

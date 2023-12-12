@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pedra_papel_tesoura_lagarto_spock/widgets/custom_appbar.dart';
 
 import '../widgets/rule_widget.dart';
 
@@ -19,12 +20,8 @@ class _RuleScreenState extends State<RuleScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 64, 67, 120),
-        title: const Text('Regras'),
-        titleTextStyle: TextStyle(
-            color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
-        centerTitle: true,
+      appBar: CustomAppBar(
+        text: 'Regras',
       ),
       body: SingleChildScrollView(
         child: Padding(
