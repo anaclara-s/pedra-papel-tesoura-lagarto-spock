@@ -17,13 +17,14 @@ class _GameScreenState extends State<GameScreen> {
   var options = ['pedra', 'papel', 'tesoura', 'lagarto', 'spock'];
   var menssage = '';
 
-  var userChoiceImage = const AssetImage('assets/fundo.png');
-  var computerChoiceImage = const AssetImage('assets/fundo.png');
-  var stoneImage = const AssetImage('assets/pedra.png');
-  var paperImage = const AssetImage('assets/papel.png');
-  var scissorsImage = const AssetImage('assets/tesoura.png');
-  var lizardImage = const AssetImage('assets/lagarto.png');
-  var spockImage = const AssetImage('assets/spock.png');
+  var userChoiceImage = const AssetImage('assets/images/game/fundo.png');
+  var computerChoiceImage = const AssetImage('assets/images/game/fundo.png');
+
+  var stoneImage = const AssetImage('assets/images/game/pedra.png');
+  var paperImage = const AssetImage('assets/images/game/papel.png');
+  var scissorsImage = const AssetImage('assets/images/game/tesoura.png');
+  var lizardImage = const AssetImage('assets/images/game/lagarto.png');
+  var spockImage = const AssetImage('assets/images/game/spock.png');
 
   var score = 0;
   var victory = 0;
@@ -34,8 +35,8 @@ class _GameScreenState extends State<GameScreen> {
     int random = Random().nextInt(4);
     String randoms = options[random];
 
-    userChoiceImage = AssetImage('assets/$choice.png');
-    computerChoiceImage = AssetImage('assets/$randoms.png');
+    userChoiceImage = AssetImage('assets/images/game/$choice.png');
+    computerChoiceImage = AssetImage('assets/images/game/$randoms.png');
 
     if ((choice == 'pedra' && randoms == 'papel') ||
         (choice == 'pedra' && randoms == 'spock') ||

@@ -62,14 +62,13 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/game_images/fundo.png
-    - assets/images/game_images/lagarto.png
-    - assets/images/game_images/papel.png
-    - assets/images/game_images/pedra.png
-    - assets/images/game_images/spock.png
-    - assets/images/game_images/tesoura.png
-    - assets/images/game_images/logoB.png
-
+    - assets/images/game/fundo.png
+    - assets/images/game/lagarto.png
+    - assets/images/game/papel.png
+    - assets/images/game/pedra.png
+    - assets/images/game/spock.png
+    - assets/images/game/tesoura.png
+    - assets/images/game/logoB.png
     - assets/images/prints/print_finalPage.png
     - assets/images/prints/print_gamePage_derrota.png
     - assets/images/prints/print_gamePage_empate.png

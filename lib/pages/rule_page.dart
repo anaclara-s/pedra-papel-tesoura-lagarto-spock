@@ -11,11 +11,11 @@ class RuleScreen extends StatefulWidget {
 }
 
 class _RuleScreenState extends State<RuleScreen> {
-  var stoneImage = const AssetImage('assets/pedra.png');
-  var paperImage = const AssetImage('assets/papel.png');
-  var scissorsImage = const AssetImage('assets/tesoura.png');
-  var lizardImage = const AssetImage('assets/lagarto.png');
-  var spockImage = const AssetImage('assets/spock.png');
+  var stoneImage = const AssetImage('assets/images/game/pedra.png');
+  var paperImage = const AssetImage('assets/images/game/papel.png');
+  var scissorsImage = const AssetImage('assets/images/game/tesoura.png');
+  var lizardImage = const AssetImage('assets/images/game/lagarto.png');
+  var spockImage = const AssetImage('assets/images/game/spock.png');
 
   @override
   Widget build(BuildContext context) {
